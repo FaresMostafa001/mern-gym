@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Banner from '../assets/banner.png'
+import Cards from '../components/Cards'
 import '../index.css'
 import { TypeAnimation } from 'react-type-animation';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,42 +28,45 @@ export default function Home() {
         <div className='relative z-1 max-w-[40rem] mx-auto text-center  lg:mb:[2rem]'>
       
           <img className='banner' src={Banner} alt="" />
+          <div className='typing'>
+
           <TypeAnimation 
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'We are nutration',
+        'here you will find nutration !',
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'We are excercises',
+        'here you will find excercises !',
         1000,
-        'We are online coaching',
+        'here you will find online coaching !',
         1000,
-        'We are helath !',
+        'here you will find helath !',
         1000,
-        'We are different !',
+        'here you will find Yourself !',
         3000
       ]}
       cursor={true}
 
       wrapper="span"
       speed={50}
-      style={{ fontSize: '3em', display: 'flex',color:'white' }}
+      style={{ fontSize: '2em', display: 'flex',color:'white' }}
       repeat={Infinity}
     />
+              </div>
+
         </div>
       </div>
 
 
-<div className='section-title-group max-w-[540px] mx-auto px-4 lg:px-0'>
-  <img src={icon} alt="" />
-  <h2 className='text-primary '>
-   <span className='text-primary-400'>  {title}</span>
-    
-  <div>
-    <WorkoutSlider />
-  </div>
-  </h2>
+      {/* الجزء التاني */}
 
-</div>
+      <div><Cards /></div>
+
+
+
+
+
+
+
 
     </section>
 

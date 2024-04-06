@@ -4,26 +4,37 @@ import {Swiper,SwiperSlide} from 'swiper/react'
 import "swiper/css";
 import "swiper/css/navigation";
 import '../workoutSlider.css'
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
+import { RxArrowTopRight } from "react-icons/rx";
+
+import { FreeMode } from 'swiper/modules';
 
 const WorkoutSlider = () => {
   const {programs} =workouts
-  return <Swiper slidesPerView={3} navigation={true} breakpoints={{
-    768:{
-      slidesPerView:3,
+  return <Swiper slidesPerView={4} navigation={true}  breakpoints={{
+    340: {
+      slidesPerView: 2,
+      spaceBetween: 15,
     },
-
-    1024:{
-      slidesPerView:4,
+    700: {
+      slidesPerView: 3,
+      spaceBetween: 15,
     },
-  }} modules={Navigation} className='workoutSlider' spaceBetween={32}>
+  }}
+  freeMode={true}
+  pagination={{
+    clickable: true,
+  }}
+  modules={[FreeMode, Pagination]} className='workoutSlider' spaceBetween={32}>
   {programs.map((programs,idx) =>{
     const{image ,name}=programs;
     return(
-      <SwiperSlide  className='max-w-[320px] max-h-[320px] relative' key={idx}>
+      <SwiperSlide  className='flex flex-col gap-6 mb-10 group relative shadow-lg text-white rounded-xl px-50 py-10 h-[250px] w-[100px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer"' key={idx}>
         <img className='w-full h-full object-cover'src={image} alt="" />
-        <div className='absolute left-[20px] bottom-[20px] bg-white h-[26px] px-[14px] flex items-center rounded-[1px]'>
+        <div className='absolute inset-0 bg-cover bg-center'>
           <div className='font-primary font-semibold text-sm text-neutral-500'>{name}</div>
+          <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
+
         </div>
       </SwiperSlide>
     )
