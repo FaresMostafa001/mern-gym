@@ -3,14 +3,17 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {AiOutlineSearch}from 'react-icons/ai'
 import {FaMoon} from 'react-icons/fa'
+import Logo from '../assets/logo.png'
+import './header.css'
 export default function Header() {
     const path =useLocation().pathname
   return (
     <Navbar className='border-b-2'>
-<Link  to='/' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
+<Link  to='/home' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
 >
     <span className='px-2 py-1 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400 rounded-lg text-white' >Gym</span>
      App
+     <img className='logo1' src={Logo}></img>
 </Link>
     <form>
         <TextInput type='text' 
@@ -35,7 +38,7 @@ export default function Header() {
     </div>
     <Navbar.Collapse>
         <Navbar.Link active={path === '/'} as={'div'}>
-          <Link to='/'>Home</Link>
+          <Link to='/home'>Home</Link>
         </Navbar.Link>
         <Navbar.Link active={path === '/about'} as={'div'}>
           <Link to='/about'>About</Link>
