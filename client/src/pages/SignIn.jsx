@@ -16,23 +16,6 @@ export default function SignIn() {
       return setErrorMessage('please fill our fields to continue!')
   
     }
-    try{
-
-      const res=await fetch('',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify9(formData)
-   
-      })
-    const data = await res.json();
-    if (data.success === false) {
-return setErrorMessage(data.message)    }
-
-  }
-  
-
-    catch(error){
-    }
   }
 
   return (
