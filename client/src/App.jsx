@@ -9,6 +9,7 @@ import Projects from './pages/Projects'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import BMICalculator from './pages/BMICalculator'
+import Blog from './pages/Blog'
 export default function App() {
   
   return (
@@ -21,6 +22,7 @@ export default function App() {
     <Route path='/home' element={<Home />} ></Route>
     <Route path='/about' element={<About />} ></Route>
     <Route path='/bmiCalculator' element={<BMICalculator />} ></Route>
+    <Route path='/Blog' element={<Blog />} ></Route>
     <Route path='/sign-in' element={<SignIn />} ></Route>
     <Route path='/sign-up' element={<SignUp />} ></Route>
     <Route path='/dashboard' element={<Dashboard />} ></Route>
