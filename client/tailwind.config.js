@@ -8,8 +8,22 @@ export default {
   theme: {
     fontFamily: {
       'Bungee': ['Bungee', 'sans-serif'],
-      'MyFont': ['"My Font"', 'serif'] // Ensure fonts with spaces have " " surrounding it.
+      'MyFont': ['"My Font"', 'serif'] ,// Ensure fonts with spaces have " " surrounding it.
+      'rubic' :['"Rubik", sans-serif'],
+      'h1' :["Archivo Black" ,"sans-serif"]
+
     },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      primary:"#222529",
+      w:'#00000',
+
+      blue: {
+        light: '#85d7ff',
+        DEFAULT: '#1fb6ff',
+        dark: '#009eeb',
+      },
     extend: {
       
     },
@@ -17,5 +31,5 @@ export default {
   },
   plugins: [ require('flowbite/plugin'),
 ],
-  
+}
 }

@@ -6,3 +6,16 @@ height: 10%;
 margin-left: 10%;
 display: inline-block;
 }
+
+.logo,.links{
+    color: white;
+}
+
+.navItem:hover{
+    color: #FF7C25;
+    transition: 0.2s;
+}
+
+.navItem{
+    font-size: 1.1rem;
+}

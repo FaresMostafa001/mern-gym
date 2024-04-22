@@ -16,7 +16,7 @@ export default function Home() {
   const {title ,icon} =workouts
   return (
 
-    <section className='bg-black'
+    <section className='bg-primary'
     crosess
     crosessOffset='lg:translate-y-[5.25rem]'
     cusstomPaddings
@@ -24,42 +24,21 @@ export default function Home() {
     >
     
 
-      <div className="container relative "> 
-        <div className='relative z-1 max-w-[40rem] mx-auto text-center  lg:mb:[2rem]'>
-      
-          <img className='banner' src={Banner} alt="" />
-          <div className='typing'>
+      <div className=' flex z-1 max-w-[500rem] h-100   lg:mb:[2rem] px-40 py-30 '>
 
-          <TypeAnimation 
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        'here you will find nutration !',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'here you will find excercises !',
-        1000,
-        'here you will find online coaching !',
-        1000,
-        'here you will find helath !',
-        1000,
-        'here you will find Yourself !',
-        3000
-      ]}
-      cursor={true}
 
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: '2em', display: 'flex',color:'white' }}
-      repeat={Infinity}
-    />
-              </div>
+        <h1 className='py-40 text-4xl font-h1 slogan '>Master your skill by <br /> your personal <br /> trainer coach</h1>
+        <div className=' flex '><img className='' src={Banner} alt="" /></div>
 
-        </div>
       </div>
+
+
+    
 
 
       {/* الجزء التاني */}
 
-      <div><Cards /></div>
+      
 
 
 

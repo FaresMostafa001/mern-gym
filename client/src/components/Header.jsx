@@ -8,57 +8,41 @@ import './header.css'
 export default function Header() {
     const path =useLocation().pathname
   return (
-    <Navbar className='border-b-2 '>
-<Link  to='/home' className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
+    <Navbar className=' bg-primary pt-10	font-rubic nav
+    '>
+<Link   to='/home' className=' logo self-center whitespace-nowrap text-sm sm:text-xl font-semibold text-white;
+'
 >
-    <span className='px-1 py-1 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400 rounded-lg text-white' >Gym</span>
-     App
-     <img className='logo1' src={Logo}></img>
+    <span className='text-white px-20	' >Gymnasstics App</span>
+     
+     
 </Link>
-    <form>
-        <TextInput type='text' 
-        placeholder='Search ..'
-        rightIcon={AiOutlineSearch}
-        className='hidden lg:inline'
-        />
-    </form>
+    
    
-    <div className='flex gap-2 md:order-5'>
-        <Button className='w-12 h-10 hidden sm:inline'
-          color='gray'
-          pill>
-            <FaMoon />
-        </Button>
-        <Link to='/sign-in'>
-            <Button gradientDuoTone='purpleToBlue' outline>
-              Sign In
-            </Button>
-          </Link>
+    <div className='flex flex-auto gap-3 md:order-5'>
+      
           <NavbarToggle/>
     </div>
-    <Navbar.Collapse>
+    <Navbar.Collapse className='links text-inherit '>
         <Navbar.Link active={path === '/'} as={'div'}>
-          <Link to='/home'>Home <FaHome /></Link>
+          <Link className='navItem' to='/home'>Home </Link>
         </Navbar.Link>
         <Navbar.Link active={path === '/about'} as={'div'}>
-          <Link to='/about'>About <FaInfo /></Link>
+          <Link className='navItem' to='/about'>About us </Link>
         </Navbar.Link>
 
-        <Navbar.Link active={path === '/BMICalculator'} as={'div'}>
-          <Link to='/BMICalculator'>Free BMICalculator <FaCalculator /></Link>
-        </Navbar.Link>
-
+        
         <Navbar.Link active={path === '/Blog'} as={'div'}>
-          <Link to='/Blog'>Blog <FaBlog /></Link>
+          <Link className='navItem' to='/Blog'>Join To Us </Link>
         </Navbar.Link>
 
 
         <Navbar.Link active={path === '/projects'} as={'div'}>
-          <Link to='/projects'>Exercises <FaDumbbell /></Link>
+          <Link className='navItem' to='/projects'>Download </Link>
         </Navbar.Link>
 
         <Navbar.Link active={path === '/dashboard'} as={'div'}>
-          <Link to='/dashboard'>dashboard </Link>
+          <Link className='navItem' to='/dashboard'>Dashboard </Link>
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
