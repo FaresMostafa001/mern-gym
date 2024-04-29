@@ -18,6 +18,7 @@ export default {
       current: 'currentColor',
       primary:"#222529",
       w:'#00000',
+      orange:"#FE6E0E",
 
       blue: {
         light: '#85d7ff',
