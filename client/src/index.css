@@ -70,3 +70,11 @@ justify-content: center;
     width: 80%;
 }
 
+
+
+.download{
+    position: absolute;
+    font-size: 3rem;
+    top: 20%;
+    right: 3%;
+}

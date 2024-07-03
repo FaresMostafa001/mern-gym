@@ -1,6 +1,5 @@
 import React from 'react'
-import Screens from'../assets/screens.png'
-import Team from '../assets/team.png'
+import Team from '../assets/myteam.jpg'
 
 function Home3() {
   return (
